@@ -26,7 +26,7 @@
     saveDialog: document.querySelector('.saveDialogContainer'),
     indexForm: document.getElementById('indexForm'),
     theme: showCookie("Theme"),
-    version: "0.6.50"
+    version: "0.6.51"
   };
 
 
