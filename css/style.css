@@ -1,0 +1,201 @@
+body {
+  transition: background-color 150ms linear;
+}
+.navbar-custom {
+  transition: background-color 150ms linear;
+    background-color: #B0122D;
+}
+
+/* change the brand and text color */
+.navbar-custom .navbar-brand,
+.navbar-custom .navbar-text {
+    color: rgba(255,255,255,.8);
+}
+
+.navbar-custom .navbar-brand:hover {
+    color:white;
+}
+
+/* change the link color */
+.navbar-custom .navbar-nav .nav-link {
+    color: rgba(255,255,255,.5);
+}
+
+/* change the color of active or hovered links */
+.navbar-custom .nav-item.active .nav-link,
+.navbar-custom .nav-item:hover .nav-link {
+    color: #ffffff;
+}
+
+/* for dropdown only - change the color of droodown */
+.navbar-custom .dropdown-menu {
+  transition: background-color 150ms linear;
+    background-color: #ff5500;
+}
+.navbar-custom .dropdown-item {
+    color: #ffffff;
+}
+.navbar-custom .dropdown-item:hover,
+.navbar-custom .dropdown-item:focus {
+  transition: background-color 150ms linear;
+    color: #333333;
+    background-color: rgba(255,255,255,.5);
+}
+
+ .vh-100{
+   min-height: 100vh;
+ }
+ .mainhide {
+   transition: background-color, border-left, border-right 150ms linear;
+   background-color: #f0f0f0;
+   border-left: 1px solid #CED4DA;
+   border-right: 1px solid #CED4DA;
+ }
+
+.form-control {
+  transition: background-color 150ms linear;
+}
+/* introduction for dark mode */
+
+body.dark {
+  background-color: #212121;
+  color: #f0f0f0;
+}
+
+.navbar-custom.dark {
+    background-color: #303030;
+}
+
+.mainhide.dark {
+  background-color: #000;
+  border-left: 1px solid #262626;
+  border-right: 1px solid #262626;
+}
+
+.form-control.dark {
+  color:#f0f0f0;
+  background-color: #212121;
+  border-color:#383838;
+}
+
+.form-control.dark::placeholder {
+    color: #bfbfbf;
+    opacity: 1;
+}
+
+.form-control.dark:focus {
+    background-color: #303030;
+    opacity: 1;
+}
+
+.saveDialogContent.dark {
+  background-color: #3c3b3b;
+}
+
+.loader {
+  left: 50%;
+  top: 50%;
+  position: fixed;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%); }
+  .loader #spinner {
+    box-sizing: border-box;
+    stroke: #673AB7;
+    stroke-width: 3px;
+    -webkit-transform-origin: 50%;
+            transform-origin: 50%;
+    -webkit-animation: line 1.6s cubic-bezier(0.4, 0, 0.2, 1) infinite, rotate 1.6s linear infinite;
+            animation: line 1.6s cubic-bezier(0.4, 0, 0.2, 1) infinite, rotate 1.6s linear infinite; }
+
+@-webkit-keyframes rotate {
+  from {
+    -webkit-transform: rotate(0);
+            transform: rotate(0); }
+  to {
+    -webkit-transform: rotate(450deg);
+            transform: rotate(450deg); } }
+
+@keyframes rotate {
+  from {
+    -webkit-transform: rotate(0);
+            transform: rotate(0); }
+  to {
+    -webkit-transform: rotate(450deg);
+            transform: rotate(450deg); } }
+
+            @-webkit-keyframes line {
+              0% {
+                stroke-dasharray: 2, 85.964;
+                -webkit-transform: rotate(0);
+                        transform: rotate(0); }
+              50% {
+                stroke-dasharray: 65.973, 21.9911;
+                stroke-dashoffset: 0; }
+              100% {
+                stroke-dasharray: 2, 85.964;
+                stroke-dashoffset: -65.973;
+                -webkit-transform: rotate(90deg);
+                        transform: rotate(90deg); } }
+
+            @keyframes line {
+              0% {
+                stroke-dasharray: 2, 85.964;
+                -webkit-transform: rotate(0);
+                        transform: rotate(0); }
+              50% {
+                stroke-dasharray: 65.973, 21.9911;
+                stroke-dashoffset: 0; }
+              100% {
+                stroke-dasharray: 2, 85.964;
+                stroke-dashoffset: -65.973;
+                -webkit-transform: rotate(90deg);
+                        transform: rotate(90deg); } }
+
+.saveDialogContainer {
+  background: rgba(0, 0, 0, 0.57);
+position: fixed;
+left: 0;
+top: 0;
+width: 100%;
+height: 100%;
+opacity: 0;
+pointer-events: none;
+will-change: opacity;
+-webkit-transition: opacity 0.333s cubic-bezier(0, 0, 0.21, 1);
+transition: opacity 0.333s cubic-bezier(0, 0, 0.21, 1);
+}
+
+.saveDialogContainer--visible {
+  opacity: 1;
+  pointer-events: auto; }
+
+.saveDialogContent {
+  padding: 15px;
+  background: #F0f0f0;
+border-radius: 15px;
+box-shadow: 0 0 14px rgba(0, 0, 0, 0.24), 0 14px 28px rgba(0, 0, 0, 0.48);
+min-width: 320px;
+position: absolute;
+left: 50%;
+top: 50%;
+-webkit-transform: translate(-50%, -50%) translateY(30px);
+        transform: translate(-50%, -50%) translateY(30px);
+-webkit-transition: -webkit-transform 0.333s cubic-bezier(0, 0, 0.21, 1) 0.05s;
+transition: -webkit-transform 0.333s cubic-bezier(0, 0, 0.21, 1) 0.05s;
+transition: transform 0.333s cubic-bezier(0, 0, 0.21, 1) 0.05s;
+transition: transform 0.333s cubic-bezier(0, 0, 0.21, 1) 0.05s, -webkit-transform 0.333s cubic-bezier(0, 0, 0.21, 1) 0.05s;
+}
+
+
+.saveDialogControl {
+  position: absolute;
+  right: 0;
+  top: -35px;
+  color: #E81123;
+  font-size: 25px;
+  transition: color 150ms linear;
+}
+
+.saveDialogControl:hover {
+  color: #FF142B;
+}
