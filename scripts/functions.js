@@ -44,7 +44,7 @@ var saveDialog = document.querySelector('.saveDialogContainer');
     var data = new Date();
     var liczitems = licz(inputWymiar, inputSztuk, inputSpeed, inputPoIle);
     saveItems(inputName, inputAdnot, inputWymiar, inputPoIle, inputSztuk, inputSpeed, data, liczitems);
-
+    window.location.reload();
   });
 
 
@@ -273,5 +273,3 @@ makeDialog = function(content, name) {
   //var kontener2 = document.getElementById('item'+newItemNameDigit+'group');
   //kontener2.appendChild(znacznik2);
 }
-
-
