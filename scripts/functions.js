@@ -192,6 +192,7 @@ darkTheme = function() {
   document.body.classList.add("dark");
   document.querySelector('.mainhide').classList.add("dark");
   document.querySelector('.navbar-custom').classList.add("dark");
+  document.querySelector('.table').classList.add("dark");
   document.querySelector("meta[name=theme-color]").setAttribute("content", "#000000");
 
   //Zmienne
@@ -219,6 +220,7 @@ lightTheme = function() {
   document.body.classList.remove("dark");
   document.querySelector('.mainhide').classList.remove("dark");
   document.querySelector('.navbar-custom').classList.remove("dark");
+  document.querySelector('.table').classList.remove("dark");
   document.querySelector('.saveDialogContent').classList.remove("dark");
   document.querySelector("meta[name=theme-color]").setAttribute("content", "#790005");
   var formClass = document.getElementsByClassName('form-control');

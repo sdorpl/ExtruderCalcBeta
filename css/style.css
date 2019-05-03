@@ -62,6 +62,10 @@ body.dark {
   color: #f0f0f0;
 }
 
+.table.dark {
+  color: #f0f0f0;
+}
+
 .navbar-custom.dark {
     background-color: #303030;
 }
