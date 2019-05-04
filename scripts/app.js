@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+import { apver } from './ver.js';
 
 (function() {
   'use strict';
@@ -26,9 +27,9 @@
     saveDialog: document.querySelector('.saveDialogContainer'),
     indexForm: document.getElementById('indexForm'),
     theme: showCookie("Theme"),
-    version: "0.6.57"
+    version: apver()
   };
-
+  alert(app.version);
 
   /*****************************************************************************
    *
@@ -137,7 +138,7 @@
 // Service Worker Initialize
 
 if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/service-worker.js').then(reg => {
+  navigator.serviceWorker.register('/service-worker.js', { type: "module" }).then(reg => {
     reg.addEventListener('updatefound', () => {
       // A wild service worker has appeared in reg.installing!
       newWorker = reg.installing;
