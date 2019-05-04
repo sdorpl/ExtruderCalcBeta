@@ -6,7 +6,7 @@ self.importScripts('./scripts/ver.js');
 
 const version = apver();
 const cacheName = `excalc-beta-${version}`;
-document.getElementById('appver').innerHTML = `${version}-beta`;
+//document.getElementById('appver').innerHTML = `${version}-beta`;
 var filesToCache = [
   '/',
   '/index.html',
