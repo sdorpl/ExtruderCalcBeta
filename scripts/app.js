@@ -36,7 +36,7 @@
    *
    ****************************************************************************/
   //Set dark
-  document.getElementById('appver').innerHTML = app.version;
+  //document.getElementById('appver').innerHTML = app.version;
   if (!app.theme) {
     setCookie("Theme", "light", 3650);
   }
