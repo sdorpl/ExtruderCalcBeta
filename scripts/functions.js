@@ -275,3 +275,7 @@ makeDialog = function(content, name) {
   //var kontener2 = document.getElementById('item'+newItemNameDigit+'group');
   //kontener2.appendChild(znacznik2);
 }
+
+showItemSaved = function(name) {
+  alert(name);
+}
