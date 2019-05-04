@@ -137,7 +137,7 @@
 // Service Worker Initialize
 
 if ('serviceWorker' in navigator) {
-self.importScripts('./scripts/ver.js');
+importScripts('./ver.js');
 alert(apver());
   //navigator.serviceWorker.register('/service-worker.js', { type: "module" })
   navigator.serviceWorker.register('/service-worker.js').then(reg => {
