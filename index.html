@@ -206,7 +206,7 @@
                      var saved_it = document.getElementById('saved_items');
                      var saved_it = document.getElementById('saved_items');
                      var new_tr = document.createElement('tr');
-                     new_tr.innerHTML = "<td>"+value.nazwa+"</td>  <td>"+value.adnotacja+"</td>";
+                     new_tr.innerHTML = "<td><a href="+value.nazwa+" onclick='myfc("+value.nazwa+")'>" +value.nazwa+"</a></td>  <td>"+value.adnotacja+"</td>";
                      saved_it.appendChild(new_tr);
                    }).catch(function(err) {
                      // This code runs if there were any errors
