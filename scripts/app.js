@@ -138,7 +138,8 @@ import { apver } from './ver.js';
 // Service Worker Initialize
 
 if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/service-worker.js', { type: "module" }).then(reg => {
+  //navigator.serviceWorker.register('/service-worker.js', { type: "module" })
+  navigator.serviceWorker.register('/service-worker.js').then(reg => {
     reg.addEventListener('updatefound', () => {
       // A wild service worker has appeared in reg.installing!
       newWorker = reg.installing;
