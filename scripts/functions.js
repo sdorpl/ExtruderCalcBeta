@@ -272,7 +272,7 @@ makeDialog = function(content, name) {
   //Nazwa Class
   dialogContainer.className = 'saveDialogContainer';
   //ustalam miejsce dla Dialog
-  var dialogFrame = document.getElementById('dialogT');
+  var dialogFrame = document.getElementById('sdlg');
   //wstawiam dialogContainer do dialogFrame div
   dialogFrame.appendChild(dialogContainer);
 
@@ -287,5 +287,12 @@ makeDialog = function(content, name) {
 }
 
 showItemSaved = function(name) {
-  alert(name);
+  console.log(name);
+  var dialogContainer = document.createElement('div');
+  //Nazwa Class
+  dialogContainer.className = 'saveDialogContainer';
+  //ustalam miejsce dla Dialog
+  var dialogFrame = document.getElementById('sdlg');
+  //wstawiam dialogContainer do dialogFrame div
+  dialogFrame.appendChild(dialogContainer);
 }

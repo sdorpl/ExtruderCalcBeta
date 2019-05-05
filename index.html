@@ -146,7 +146,7 @@
             <button id="showSaveDialog" class="btn btn-success" role="button" style="position: fixed; bottom: 35px; right: 35px; font-size: 35px;">
               <i class="fas fa-save"></i>
             </button>
-            <div class="saveDialogContainer" style="">
+            <div class="saveDialogContainer">
 
               <div class="saveDialogContent">
 
@@ -206,7 +206,13 @@
                      var saved_it = document.getElementById('saved_items');
                      var new_tr = document.createElement('tr');
                      var onc = "showItemSaved('"+value.nazwa+"')";
-                     new_tr.innerHTML = '<td><a href="#' +value.nazwa+ '" onclick="'+onc.toString()+'">' +value.nazwa+'</a></td>  <td>'+value.adnotacja+'</td>';
+                     new_tr.innerHTML = '<td>'+value.nazwa+'</td>'+
+                                        '<td>'+value.adnotacja+'</td>'+
+                                        '<td>'+value.wymiar+'</td>'+
+                                        '<td>'+value.sztuk+'</td>'+
+                                        '<td>'+value.item.kartony+'</td>'+
+                                        '<td>'+value.item.czas+'</td>';
+
                      saved_it.appendChild(new_tr);
                    }).catch(function(err) {
                      // This code runs if there were any errors
@@ -222,16 +228,22 @@
             <div id="nosaved" class="alert alert-danger" hidden>
                 <strong>Uwaga!</strong> nie zapisano nic
             </div>
-            <table class="table" id="table_its">
+            <table class="table-responsive table" id="table_its">
               <thead>
                 <tr>
                   <th scope="col">Nazwa</th>
                   <th scope="col">Adnotacja</th>
+                  <th scope="col">Wymiar</th>
+                  <th scope="col">Sztuk</th>
+                  <th scope="col">kartony</th>
+                  <th scope="col">czas</th>
+
                 </tr>
               </thead>
               <tbody id="saved_items">
               </tbody>
             </table>
+            <div id="sdlg"></div>
           </div>
 
         </div>

@@ -1,6 +1,9 @@
 body {
   transition: background-color 150ms linear;
 }
+
+
+
 .navbar-custom {
   transition: background-color 150ms linear;
     background-color: #B0122D;
