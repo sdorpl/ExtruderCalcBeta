@@ -14,8 +14,6 @@
 
 import { apver } from './ver.js';
 
-alert(apver());
-
 (function() {
   'use strict';
 
@@ -29,7 +27,7 @@ alert(apver());
     saveDialog: document.querySelector('.saveDialogContainer'),
     indexForm: document.getElementById('indexForm'),
     theme: showCookie("Theme"),
-    version: "apver()"
+    version: apver()
   };
   //alert(app.version);
 
@@ -39,7 +37,7 @@ alert(apver());
    *
    ****************************************************************************/
   //Set dark
-  //document.getElementById('appver').innerHTML = app.version;
+  document.getElementById('appver').innerHTML = app.version;
   if (!app.theme) {
     setCookie("Theme", "light", 3650);
   }
