@@ -187,44 +187,6 @@
 
           <!--- saveed tab --->
           <div class="tab-pane fade" id="saved" role="tabpanel" aria-labelledby="asaved-tab">
-            <script>
-            localforage.keys().then(function(keys) {
-              var table_its = document.getElementById('table_its');
-              var table_nosaved = document.getElementById('nosaved');
-              // An array of all the key names.
-              if(keys.length == 0) {
-                table_nosaved.removeAttribute('hidden');
-                table_its.setAttribute('hidden', true);
-               } else {
-                 for (let i = 0; i < keys.length; i++) {
-
-                   localforage.getItem(keys[i]).then(function(value) {
-                     // This code runs once the value has been loaded
-                     // from the offline store.
-                     console.log(value.nazwa);
-                     var saved_it = document.getElementById('saved_items');
-                     var saved_it = document.getElementById('saved_items');
-                     var new_tr = document.createElement('tr');
-                     var onc = "showItemSaved('"+value.nazwa+"')";
-                     new_tr.innerHTML = '<td>'+value.nazwa+'</td>'+
-                                        '<td>'+value.adnotacja+'</td>'+
-                                        '<td>'+value.wymiar+'</td>'+
-                                        '<td>'+value.sztuk+'</td>'+
-                                        '<td>'+value.item.kartony+'</td>'+
-                                        '<td>'+value.item.czas+'</td>';
-
-                     saved_it.appendChild(new_tr);
-                   }).catch(function(err) {
-                     // This code runs if there were any errors
-                     console.log(err);
-                   });
-                 }
-               }
-            }).catch(function(err) {
-              // This code runs if there were any errors
-              console.log(err);
-            });
-            </script>
             <div id="nosaved" class="alert alert-danger" hidden>
                 <strong>Uwaga!</strong> nie zapisano nic
             </div>
@@ -240,7 +202,7 @@
 
                 </tr>
               </thead>
-              <tbody id="saved_items">
+              <tbody id="saved_items" class="">
               </tbody>
             </table>
             <div id="sdlg"></div>

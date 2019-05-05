@@ -1,11 +1,9 @@
 //
-  localforage.config({
-      name: 'ExCalc Beta'
-  });
+
 
 //
 $(document).ready(function () {
-$(document).click(function (event) {
+$("main").click(function (event) {
     var clickover = $(event.target);
     var _opened = $(".navbar-collapse").hasClass("navbar-collapse collapse show");
     if (_opened === true && !clickover.hasClass("navbar-toggle")) {

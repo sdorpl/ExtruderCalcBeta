@@ -57,6 +57,15 @@
     lightTheme();
   });
 
+  //showSaved
+  document.getElementById('saved-tab').addEventListener('click', function() {
+    let isShowed = document.getElementById('saved_items').className;
+    if(!isShowed) {
+      app.showSaved();
+    }
+  });
+
+
 //  if (app.indexForm) {
 //    //Obliczam
 //    app.indexForm.addEventListener('change', function() {
@@ -108,6 +117,44 @@
 
   };
 
+app.showSaved = function() {
+  localforage.keys().then(function(keys) {
+    var table_its = document.getElementById('table_its');
+    var table_nosaved = document.getElementById('nosaved');
+    // An array of all the key names.
+    if(keys.length == 0) {
+      table_nosaved.removeAttribute('hidden');
+      table_its.setAttribute('hidden', true);
+     } else {
+       for (let i = 0; i < keys.length; i++) {
+
+         localforage.getItem(keys[i]).then(function(value) {
+           // This code runs once the value has been loaded
+           // from the offline store.
+           console.log(value.nazwa);
+           var saved_it = document.getElementById('saved_items');
+           var new_tr = document.createElement('tr');
+           var onc = "showItemSaved('"+value.nazwa+"')";
+           new_tr.innerHTML = '<td>'+value.nazwa+'</td>'+
+                              '<td>'+value.adnotacja+'</td>'+
+                              '<td>'+value.wymiar+'</td>'+
+                              '<td>'+value.sztuk+'</td>'+
+                              '<td>'+value.item.kartony+'</td>'+
+                              '<td>'+value.item.czas+'</td>';
+
+           saved_it.appendChild(new_tr);
+           saved_it.className = "showed";
+         }).catch(function(err) {
+           // This code runs if there were any errors
+           console.log(err);
+         });
+       }
+     }
+  }).catch(function(err) {
+    // This code runs if there were any errors
+    console.log(err);
+  });
+};
 
   // TODO add service worker code here
   //  if ('serviceWorker' in navigator) {
