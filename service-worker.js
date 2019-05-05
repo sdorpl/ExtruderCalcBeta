@@ -2,7 +2,7 @@
 
 //import { apver } from './scripts/ver.js';
 
-self.importScripts('./scripts/ver.js');
+self.importScripts('https://beta.excalc.tk/scripts/ver.js');
 
 const version = apver();
 const cacheName = `excalc-beta-${version}`;
