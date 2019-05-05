@@ -1,10 +1,7 @@
 // ExtruderCalc
 
-//import { apver } from './scripts/ver.js';
 
-self.importScripts('https://beta.excalc.tk/scripts/ver.js');
-
-const version = apver();
+const version = "0.6.65";
 const cacheName = `excalc-beta-${version}`;
 //document.getElementById('appver').innerHTML = `${version}-beta`;
 var filesToCache = [
