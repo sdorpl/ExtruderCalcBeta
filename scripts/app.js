@@ -12,7 +12,10 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-//
+import { apver } from './scripts/ver.js';
+
+alert(apver());
+
 (function() {
   'use strict';
 
@@ -137,8 +140,6 @@
 // Service Worker Initialize
 
 if ('serviceWorker' in navigator) {
-importScripts('./ver.js');
-alert(apver());
   //navigator.serviceWorker.register('/service-worker.js', { type: "module" })
   navigator.serviceWorker.register('/service-worker.js').then(reg => {
     reg.addEventListener('updatefound', () => {
