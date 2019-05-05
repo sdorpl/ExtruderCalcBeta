@@ -4,5 +4,3 @@ function apver () {
 
   return v
 }
-
-export { apver }
