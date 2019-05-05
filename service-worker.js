@@ -15,7 +15,6 @@ var filesToCache = [
   '/images/ico_192x192.png',
   '/scripts/app.js',
   '/scripts/functions.js',
-  '/scripts/ver.js',
   '/css/style.css'
 ];
 
