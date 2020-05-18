@@ -3,12 +3,20 @@
   "short_name": "ExCalc Beta",
   "description": "Prosty kalkulator pracy przy wytłaczarce profili PVC.",
   "icons": [{
+<<<<<<< HEAD
     "src": "images/ico_512x512.png?v=1.1",
+=======
+    "src": "images/ico_512x512.png?v=1",
+>>>>>>> e0c07a668c2adeb313a1e0b2838998da4b4b3ddc
     "sizes": "512x512",
     "type": "image/png",
 	"purpose": "any maskable"
   }, {
+<<<<<<< HEAD
     "src": "/images/ico_192x192.png?v=1.1",
+=======
+    "src": "/images/ico_192x192.png?v=1",
+>>>>>>> e0c07a668c2adeb313a1e0b2838998da4b4b3ddc
     "sizes": "192x192",
     "type": "image/png",
 	"purpose": "any maskable"
